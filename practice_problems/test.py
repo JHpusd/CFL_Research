@@ -1,27 +1,9 @@
-import torch.nn as nn
-import torch.nn.functional as F
-import torch
+from sklearn.linear_model import LinearRegression
+from sklearn.linear_model import RidgeCV
+from sklearn.linear_model import LassoCV
+import numpy as np
 
-'''
-test = torch.Tensor([[5.0,4.0,2.0], [4.0, 2.0, 8.0], [4.0,4.0,1.0]])
-labels = torch.tensor([0, 2, 1])
+arr1 = np.array([[1, 2, 3, 4, 5], [6, 7, 8, 9, 10], [11, 12, 13, 14, 15]])
 
-def get_nll(input, labels):
-    probs = F.softmax(input, dim=1)
-
-    # Gather the log-probabilities corresponding to the correct labels
-    batch_size = len(input)
-    nll_loss = -torch.log(probs[range(batch_size), labels])
-    return nll_loss.mean()
-
-print(get_nll(test, labels))
-
-test = torch.Tensor([-2,-1,0,1,2])
-test2 = [1,2,3,4,5]
-print(type(test2))
-test2 = torch.tensor(test2)
-print(type(test2))
-'''
-
-test = [[-2,-1,0,1,2,3]]
-print(-torch.log(test[0][3]))
+idxs = [0, 1, 4]
+print(arr1[:,idxs])
