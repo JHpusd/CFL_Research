@@ -14,4 +14,5 @@ d2_idx = np.array([1, 3])
 x = test[:,d1_idx]
 y = test[:,d2_idx]
 
-regressor = LinearRegression().fit(x.reshape(-1, 1), y.reshape(-1, 1))
+print(x)
+print(y)
