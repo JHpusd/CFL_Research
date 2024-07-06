@@ -1,18 +1,7 @@
-from sklearn.linear_model import LinearRegression
-from sklearn.linear_model import RidgeCV
-from sklearn.linear_model import LassoCV
 import numpy as np
-import pandas as pd
+import matplotlib.pyplot as plt
+from scipy import interpolate
 
-test = np.array(np.arange(36).reshape(6, 6))
+test = np.array([[0, 0], [1, 1], [2, 2], [3, 3], [4, 4]])
 
-df = pd.DataFrame(data=test, columns=['a', 'b', 'c', 'd', 'e', 'f'])
-
-d1_idx = np.array([0, 2, 5])
-d2_idx = np.array([1, 3])
-
-x = test[:,d1_idx]
-y = test[:,d2_idx]
-
-print(x)
-print(y)
+print(np.max(test, axis=1))
