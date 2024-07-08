@@ -1,7 +1,14 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from scipy import interpolate
+from scipy import stats
 
-test = np.array([[0, 0], [1, 1], [2, 2], [3, 3], [4, 4]])
+def test_func(x,y):
+    return x+y, x*y
 
-print(np.max(test, axis=1))
+def test_func2(x,y):
+    return x+y, x*y
+
+test = test_func(1,2)
+print(test)
+
+print(test_func2(*test))
